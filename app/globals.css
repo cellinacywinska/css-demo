@@ -2,26 +2,119 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #EBF2EF;
+}
+
+.wrapper {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+header {
+  width: 100%;
+  background-color: #EBF2EF;
+  position: sticky;
+  top: 0;
+  display: flex;
+}
+
+.app-name-logo-icon{
+  height: 100px;
+  margin: 10px;
+  width: auto;
+}
+
+
+.app-name {
+  height: 15px;
+  margin: 10px;
+  width: auto;
+}
+.login-white-container{
+  background-color: white;
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  width:400px;
+  height:400px;
+  border:1px solid #ebebeb;
+  border-radius:15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+  background-color:#EBF2EF;
+}
+
+.login-button{
+  background-color:#bddbce;
+  opacity: 20;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form-title {
+  margin:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:3px;
+  font-size: 30px;
+}
+input[type="checkbox"] {
+  align-self: end;
+  margin-right:6px;
+}
+
+/* footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;          
+} */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+footer>div {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-footer{
+  width: 30%;
+}
+
+.copyright-footer{
+  width: 30%;
 }
